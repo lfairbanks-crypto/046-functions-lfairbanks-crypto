@@ -1,7 +1,7 @@
 // Declare a function named `square` that returns the number multiplied by itself
 function square(n) {
 	return n * n;
-}
+
 
 // If running in a browser, attach `square` to the global `window` object
 if (typeof window !== 'undefined') {
@@ -16,5 +16,4 @@ if (typeof window !== 'undefined') {
 if (typeof module !== 'undefined' && module.exports) {
 	module.exports.square = square;
 }
-
 
