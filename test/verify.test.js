@@ -1,5 +1,12 @@
 const http = require("http");
 const fs = require("fs");
+// Puppeteer-based browser tests may fail in restricted containers
+// (missing system libraries like libnss3). Allow skipping these
+// tests by setting the env var `SKIP_CHROME=1`.
+if (process.env.SKIP_CHROME === '1') {
+  console.warn('SKIP_CHROME=1 - skipping browser tests in test/verify.test.js');
+  return;
+}
 const puppeteer = require("puppeteer");
 const { assert } = require("console");
 
