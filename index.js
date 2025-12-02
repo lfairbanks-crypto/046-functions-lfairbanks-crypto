@@ -1,4 +1,3 @@
-
 // Declare a function named `square` that returns the number multiplied by itself
 function square(n) {
 	return n * n;
